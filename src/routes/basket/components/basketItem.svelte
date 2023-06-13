@@ -49,7 +49,7 @@
 		<input type="hidden" value={data.price} name="price" />
 		<input type="hidden" value={data.qty} name="qty" />
 		<input type="hidden" value={data._id} name="pid" />
-		<span class="idx hidden sm:inline-block">{(idx + 1 || 1).toString()}.</span>
+		<span class="idx hidden sm:inline-block">{(idx + 1).toString()}.</span>
 		<p
 			title={data.name}
 			style="overflow: hidden;

@@ -62,7 +62,8 @@
 					on:click={() => {
 						checkout = !checkout;
 					}}
-					class="idx px-4 py-2 bg-primary text-white font-semibold hover:shadow-md transition opacity-90 hover:opacity-100 rounded-md"
+					disabled={!!!$BasketCart.price}
+					class="idx px-4 py-2 bg-primary disabled:pointer-events-none disabled:opacity-40 text-white font-semibold hover:shadow-md transition opacity-90 hover:opacity-100 rounded-md"
 					>Checkout</button
 				>
 			</div>
@@ -76,7 +77,9 @@
 			<div
 				class="price w-full inline-flex flex-col items-center sm:items-end px-2 flex-1 justify-end"
 			>
-				<span> Total sum </span> <b>${($BasketCart.price || 0).toFixed(2).toString()}</b>
+				{#if $BasketCart.price}
+					<span> Total sum </span> <b>${$BasketCart.price.toFixed(2).toString()}</b>
+				{/if}
 			</div>
 		</div>
 	</div>
@@ -87,11 +90,6 @@
 		<div
 			class="sm:p-4 p-1 flex flex-col w-full gap-4 h-full max-h-[400px] overflow-hidden overflow-y-auto"
 		>
-			{#each $BasketCart.items as item, i (item._id)}
-				<div in:scale|local out:slide|local>
-					<BasketItem {item} idx={i} {enhanceRequest} />
-				</div>
-			{/each}
 			{#if !$BasketCart.items.length}
 				<div class="flex flex-col items-center justify-center w-full gap-4 mt-5">
 					<p class="text-center px-2 max-w-[30ch]">
@@ -104,6 +102,12 @@
 						>Start Shopping Now!</a
 					>
 				</div>
+			{:else}
+				{#each $BasketCart.items as item, i (item._id)}
+					<div in:scale|local out:slide|local>
+						<BasketItem {item} idx={i} {enhanceRequest} />
+					</div>
+				{/each}
 			{/if}
 		</div>
 	</div>
