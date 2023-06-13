@@ -49,7 +49,7 @@
 		<input type="hidden" value={data.price} name="price" />
 		<input type="hidden" value={data.qty} name="qty" />
 		<input type="hidden" value={data._id} name="pid" />
-		<span class="idx hidden sm:inline-block">{(idx + 1).toString()}.</span>
+		<span class="idx hidden sm:inline-block">{(idx + 1 || 1).toString()}.</span>
 		<p
 			title={data.name}
 			style="overflow: hidden;
@@ -61,7 +61,7 @@
 		>
 			{data.name}
 		</p>
-		<p class="price"><b>${(data.price * data.qty).toFixed(2).toString()}</b></p>
+		<p class="price"><b>${(data.price * data.qty || 0).toFixed(2).toString()}</b></p>
 		<div
 			class="qty border-[1px] border-slate-400 dark:border-slate-700 rounded-md overflow-hidden flex items-center gap[1px] p-[1px]"
 		>

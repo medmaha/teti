@@ -76,7 +76,7 @@
 			<div
 				class="price w-full inline-flex flex-col items-center sm:items-end px-2 flex-1 justify-end"
 			>
-				<span> Total sum </span> <b>${$BasketCart.price.toFixed(2).toString()}</b>
+				<span> Total sum </span> <b>${($BasketCart.price || 0).toFixed(2).toString()}</b>
 			</div>
 		</div>
 	</div>
@@ -100,7 +100,7 @@
 
 					<a
 						href="/products"
-						class="tt-secondary px-4 py-2 rounded-lg opacity-90 text-lg hover:opacity-100 hover:shadow-md transition"
+						class="tt-secondary text-white px-4 py-2 rounded-lg opacity-90 text-lg hover:opacity-100 hover:shadow-md transition"
 						>Start Shopping Now!</a
 					>
 				</div>

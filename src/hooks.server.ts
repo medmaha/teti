@@ -2,7 +2,6 @@ import { startMongo } from '$db/mongo';
 
 import type { Handle } from '@sveltejs/kit';
 import type { Basket } from './store/basket';
-('./database/products');
 
 startMongo()
 	.then(() => {
