@@ -1,0 +1,42 @@
+/* prettier-ignore */
+
+
+:root{
+    --primary: rgb(24,185,24);
+}
+
+@layer component {
+
+    .tt-surface {
+        @apply dark:bg-surface-dark dark:text-surface-dark-text bg-surface text-surface-text transition-[background-color] duration-300
+    }
+
+    .tt-card {
+        @apply dark:bg-secondary-surface-dark dark:text-secondary-surface-dark-text bg-white text-secondary-surface-text transition-[background-color] duration-300
+        
+    }
+    .tt-primary {
+        @apply bg-primary text-primary-text
+    }
+    .tt-secondary {
+        @apply bg-secondary text-secondary-text
+    }
+    
+    .tt-error {
+        @apply bg-error text-error-text
+    } 
+
+     .tt-success {
+        @apply bg-success text-success-text
+    } 
+
+    .tt-warning {
+        @apply bg-warning text-warning-text
+    }
+
+    .tt-info {
+        @apply bg-info text-info-text
+    } 
+
+
+}

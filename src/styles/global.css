@@ -1,0 +1,39 @@
+#searchBar::placeholder {
+    color: rgba(255, 255, 255, 0.771);
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul li> {
+    font-size: small;
+}
+
+
+nav ul li>:hover {
+    opacity: .9;
+}
+
+nav ul li.active>:hover {
+    opacity: 1;
+}
+
+nav ul li:hover,
+nav ul li.active {
+    color: var(--primary);
+}
+
+input {
+    z-index: 0;
+}
+
+
+.divider {
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.483);
+    width: 100%;
+    line-height: 1px;
+    display: inline-block;
+}
