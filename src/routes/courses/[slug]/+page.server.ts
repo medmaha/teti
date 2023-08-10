@@ -1,5 +1,6 @@
 import type { PageServerLoad } from './$types';
 import { redirect, type Actions } from '@sveltejs/kit';
+
 import Courses from '$db/courses';
 
 export const load = (async ({ params }) => {
@@ -13,7 +14,7 @@ export const load = (async ({ params }) => {
 
 	if (course) {
 		course['_id'] = course.id;
-		return { course: course.toJSON() };
+		return { payload: JSON.stringify(course.toJSON()) };
 	}
 
 	throw redirect(302, '/');

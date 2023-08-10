@@ -7,5 +7,5 @@ export const load = (async () => {
 		__data._id = course.id;
 		return __data;
 	});
-	return { courses };
+	return { payload: JSON.stringify(courses) };
 }) satisfies PageServerLoad;

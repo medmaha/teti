@@ -4,13 +4,15 @@
 	import { enhance } from '$app/forms';
 	import { scale, fade } from 'svelte/transition';
 	import PayPal from './PayPal.svelte';
-	import type { ElectricalApplicationFormInterface } from './types';
+	import type { TETIApplicationForm } from './types';
 
 	export let applyForCourse: () => void = () => {};
+	export let title = 'Electrical Installation';
+	export let price = 0;
 
-	let form = {
-		title: 'Electrical Installtion',
-		price: '277.00',
+	let form: TETIApplicationForm = {
+		title,
+		price,
 		fields: {
 			'Personal Information': {
 				Name: {
@@ -106,7 +108,7 @@
 				}
 			}
 		}
-	} as ElectricalApplicationFormInterface;
+	};
 
 	let formElm: HTMLFormElement;
 
@@ -149,13 +151,13 @@
 			class="tt-card h-full w-full rounded-lg overflow-hidden overflow-y-auto mx-auto max-w-[900px] max-h-[95vh] pb-4"
 		>
 			<div class="header py-2 pl-4">
-				<p class="mobile:text-center text-sm font-light">STUDENT APPLICATION FORM</p>
-				<p class="text-lg mobile:text-center font-light">
+				<p class="mobile:text-center text-sm font-light tracking-wider">COURSE APPLICATION FORM</p>
+				<p class="text-lg mobile:text-center font-semibold tracking-wide">
 					Tec Electrical Training Institute <span class="font-normal hidden mobile:inline"
 						>(TETI)</span
 					>
 				</p>
-				<h2 class="mobile:text-center font-semibold text-xl pt-1">
+				<h2 class="mobile:text-center font-semibold text-xl pt-1 tracking-wide">
 					{form.title}
 				</h2>
 
@@ -198,7 +200,7 @@
 										<div class="flex flex-col py-1">
 											<div class="">
 												{label}
-												<span class="text-red-400" title="Required"
+												<span class="text-gray-500" title="Required"
 													>{!fieldsData.required ? '(optional)' : '*'}</span
 												>
 											</div>
@@ -224,7 +226,12 @@
 										</div>
 									{:else}
 										<div class="mb-1 inline-flex flex-col .input-field">
-											<label for={normalize(label)} class="min-w-[100px]">{label} </label>
+											<label for={normalize(label)} class="inline-flex items-center gap-1"
+												>{label}
+												<span class="text-gray-500" title="Required">
+													{!fieldsData.required ? '(optional)' : '*'}
+												</span>
+											</label>
 											<input
 												id={normalize(label)}
 												name={normalize(label)}
@@ -244,12 +251,12 @@
 
 					<div class="flex justify-center mt-4 py-4 max-w-[250px] mx-auto flex-col">
 						<p class="text-center text-xl pb-4 opacity-80">
-							<b>D{form.price}</b>
+							<b>D{form.price.toFixed(2)}</b>
 						</p>
 						<button
 							on:click={buyCourseForm}
 							class="bg-primary opacity-90 transition hover:opacity-100 rounded-md px-6 py-2 text-white shadow"
-							>Buy This Form?</button
+							>Buy Now?</button
 						>
 					</div>
 				</form>

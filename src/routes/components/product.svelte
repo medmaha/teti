@@ -61,9 +61,7 @@
 	}
 </script>
 
-<div
-	class="product tt-card shadow-lg rounded-lg p-1 md:p-3 basis-[150px] min-w-[100px] md:basis-[200px]"
->
+<div class="product tt-card shadow-lg rounded-lg p-1 md:p-2">
 	<a
 		on:click={() => changeActiveLink('products')}
 		href={`/products/${product._id}`}

@@ -25,8 +25,8 @@ type FormFields = {
 	};
 };
 
-export type ElectricalApplicationFormInterface = {
+export type TETIApplicationForm = {
 	title: string;
-	price: string;
+	price: number;
 	fields: FormFields;
 };

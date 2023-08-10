@@ -24,8 +24,10 @@ export const load: PageServerLoad = async function ({ locals }: { locals: Locals
 	});
 
 	return {
-		courses,
-		products
+		payload: JSON.stringify({
+			courses,
+			products
+		})
 	};
 };
 

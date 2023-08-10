@@ -9,7 +9,7 @@
 
 	export let data: PageData;
 
-	$: ({ products, courses } = data);
+	const { courses, products } = JSON.parse(data.payload);
 </script>
 
 <div class="">

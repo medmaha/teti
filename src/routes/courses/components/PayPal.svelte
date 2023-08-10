@@ -37,13 +37,14 @@
 		dispatch('message', {
 			text: 'Hello!'
 		});
+		modal.close();
 	}
 
-	let modal: HTMLDivElement;
+	let modal: HTMLDialogElement;
 
 	onMount(() => {
+		modal.showModal();
 		document.addEventListener('form-checkout-complete', handleCheckoutComplete);
-		modal.focus();
 	});
 	onDestroy(() => {
 		destroy = true;
@@ -51,20 +52,16 @@
 	});
 </script>
 
-<div
-	class="fixed top-0 p-1 left-0 w-full h-[100vh] flex justify-center items-center backdrop-blur-[5px] z-50"
+<dialog
+	bind:this={modal}
+	transition:scale|local
+	class="tt-surface rounded-lg outline-0 focus:outline-0 border-0 focus:border-0 max-w-[400px] w-full p-0 backdrop:backdrop-blur-[1px] backdrop:bg-black backdrop:bg-opacity-20"
 >
-	<div
-		bind:this={modal}
-		transition:scale|local
-		class="max-w-[400px] tt-surface  dark:bg-gray-_900 shadow-2xl rounded-lg outline outline-2 dark:outline-gray-600 outline-slate-200 p-4 h-max flex justify-center items-start mx-auto w-full"
-	>
-		<div
-			class="flex justify-center items-center w-full h-full flex-col min-h-[400px] overflow-hidden overflow-y-auto max-h-[70vh]"
-		>
+	<div class="p-4 h-max flex justify-center items-start w-full">
+		<div class="flex justify-center items-center w-full h-full flex-col min-h-[350px]">
 			<h2 class="text-gray-700 dark:text-white font-semibold pb-10 text-xl">Pay With?</h2>
-			<div id="paypal-button-container" class="min-w-full h-full" style="height: 100%;" />
-			<div class="flex-1 flex items-end font-semibold pb-10">
+			<div id="paypal-button-container" class="min-w-full h-full" />
+			<div class="flex-1 flex items-end font-semibold pb-6">
 				<button
 					on:click={onClosePayment}
 					class="bg-error text-white shadow py-2 px-6 rounded-xl text-lg opacity-90 hover:opacity-100"
@@ -137,4 +134,4 @@
 			paypalButton.render('#paypal-button-container');
 		</script>
 	</div>
-</div>
+</dialog>

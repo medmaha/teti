@@ -171,7 +171,7 @@
 						>
 						<span
 							title={`quantity: ${quantity}`}
-							class="font-bold inline-block text-center bg-slate-200 min-w-[45px] text-lg border-[1px] border-gray-400 border-x-0"
+							class="font-bold inline-block text-center bg-slate-200 dark:bg-slate-700 min-w-[45px] text-lg border-[1px] border-gray-400 border-x-0"
 							>{quantity}</span
 						>
 						<button
