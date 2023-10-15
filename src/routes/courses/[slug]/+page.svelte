@@ -44,14 +44,14 @@
 		</div>
 		<div class="sm:px-4 px-2">
 			<div class="w-full tt-card shadow-lg py-2  mb-2">
-				<div
+				<divf
 					class="flex max-w-[700px] mobile:gap-2 gap-8 justify-center mx-auto flex-wrap items-center"
 				>
 					<div class="inline-flex gap-8 justify-around flex-wrap items-center">
 						<div class="flex items-center gap-[.5em]">
 							<span>Price:</span>
 							<span class="font-semibold"
-								>D{course.price[course.price.length - 2].amount.toFixed(2)}</span
+								>D{course.price[course.price.length - 2]?.amount.toFixed(2) || 0.00}</span
 							>
 						</div>
 					</div>
@@ -62,7 +62,7 @@
 							>Apply Now!</button
 						>
 					</div>
-				</div>
+				</divf>
 			</div>
 
 			<div
