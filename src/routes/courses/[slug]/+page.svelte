@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { CourseInterface } from '../../../database/courses';
+	import { AppSettings, calculateCurrency } from '../../../store/app';
 	import ApplicationForm from '../components/ApplicationForm.svelte';
 	import type { PageData } from './$types';
 
@@ -8,7 +9,6 @@
 	const course: CourseInterface = JSON.parse(data.payload);
 
 	$: applyCourse = false;
-	console.log(course);
 
 	function applyForCourse() {
 		applyCourse = !applyCourse;
@@ -51,7 +51,11 @@
 						<div class="flex items-center gap-[.5em]">
 							<span>Price:</span>
 							<span class="font-semibold"
-								>D{course.price[course.price.length - 2]?.amount.toFixed(2) || 0.00}</span
+								>{$AppSettings.currency.symbol}
+								{calculateCurrency(
+									$AppSettings.currency,
+									course.price[course.price.length - 2]?.amount || 0.0
+								)}</span
 							>
 						</div>
 					</div>
@@ -90,7 +94,7 @@
 					<ul class="mobile:pl-6">
 						{#each course.price as price}
 							<li class="list-disc text-sm max-w-full">
-								<span>D{price.amount.toFixed(2)}</span>
+								<span>D{price.amount?.toFixed(2) || 0.0}</span>
 								<span class="text-xs pl-2 dark:text-gray-400 text-gray-700">{price.durable}</span>
 							</li>
 						{/each}

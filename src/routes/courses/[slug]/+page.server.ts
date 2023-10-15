@@ -8,7 +8,7 @@ export const load = (async ({ params }) => {
 
 	const query = slug.replace('-', ' ');
 	const course = await Courses.findOne(
-		{ name: { $regex: new RegExp(query, 'i') } },
+		{ name: { $regex: new RegExp(query, 'ig') } },
 		{ levels: 0, _id: 0 }
 	);
 

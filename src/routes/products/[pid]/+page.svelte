@@ -2,6 +2,7 @@
 	/** @type {import('./$types').PageData} */
 
 	import { addItem } from '$store/basket';
+	import { AppSettings, calculateCurrency } from '../../../store/app.js';
 	import { TetiEvents } from '../../../store/events.js';
 	import PayPal from '../../courses/components/PayPal.svelte';
 
@@ -157,7 +158,10 @@
 				<div class="mt-4 w-full">
 					<p class="text-lg inline-flex gap-4">
 						<span class="font-semibold">Price:</span>
-						<span class="font-bold">{product.price}</span>
+						<span class="font-bold">
+								{$AppSettings.currency.symbol}
+							{calculateCurrency($AppSettings.currency, product.price || 0.0)}
+						</span>
 					</p>
 				</div>
 				<div class="mt-4 quantity inline-flex flex-wrap gap-4 justify-between w-full">

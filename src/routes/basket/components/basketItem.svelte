@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { type BasketItem, addItem, removeItem } from '$store/basket';
-	import { flip } from 'svelte/animate';
 	import { enhance } from '$app/forms';
+	import { AppSettings, calculateCurrency } from '../../../store/app';
 
 	export let item: BasketItem;
 	export let idx: number;
@@ -61,7 +61,12 @@
 		>
 			{data.name}
 		</p>
-		<p class="price"><b>${(data.price * data.qty || 0).toFixed(2).toString()}</b></p>
+		<p class="price">
+			<b>
+				{$AppSettings.currency.symbol}
+				{calculateCurrency($AppSettings.currency, data.price * data.qty || 0.0)}
+			</b>
+		</p>
 		<div
 			class="qty border-[1px] border-slate-400 dark:border-slate-700 rounded-md overflow-hidden flex items-center gap[1px] p-[1px]"
 		>
