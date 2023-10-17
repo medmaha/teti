@@ -86,15 +86,22 @@
 				<a on:click={_changeActiveLink} href="/" class="px-1 md:px-2 lg:px-4 text-sm">Home</a>
 			</li>
 
-			<li data-href="courses" class="h-full flex items-center">
-				<a on:click={_changeActiveLink} href="/courses" class="px-1 md:px-2 lg:px-4 text-sm"
-					>Courses</a
+
+			
+			<li data-href="services" class="h-full flex items-center">
+				<a on:click={_changeActiveLink} href="/services" class="px-1 md:px-2 lg:px-4 text-sm"
+					>Services</a
 				>
 			</li>
 
 			<li data-href="products" class="h-full flex items-center">
 				<a on:click={_changeActiveLink} href="/products" class="px-1 md:px-2 lg:px-4 text-sm"
 					>Products</a
+				>
+			</li>
+			<li data-href="school" class="h-full flex items-center">
+				<a on:click={_changeActiveLink} href="/school" class="px-1 md:px-2 lg:px-4 text-sm"
+					>School</a
 				>
 			</li>
 

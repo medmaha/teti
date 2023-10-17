@@ -1,18 +1,21 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
 	let headlines = [
-		"Transform Your Career with TETI's Electrical and Solar Training",
-		"Become a Skilled Electrician with TETI's Industry-Leading Courses",
-		"Get Ahead in the Solar Industry with TETI's Hands-On Training",
-		"Learn the Basics of Electrical Engineering with TETI's Expert Instructors",
-		"Take Your Sales Skills to the Next Level with TETI's Sales and Marketing Courses",
-		"Power Up Your Career with TETI's Comprehensive Training in Off-Grid Products"
+		"Discover Your Ultimate Off-Grid Solution with Tec Electrical",
+		"Transform Your Career with Tec Electrical and Solar Training",
+		"Become a Skilled Electrician with Tec Electrical's Industry-Leading Courses",
+		"Get Ahead in the Solar Industry with Tec Electrical's Hands-On Training",
+		"Learn the Basics of Electrical Engineering with Tec Electrical's Expert Instructors",
+		"Elevate Your Sales Skills with Tec Electrical's Sales and Marketing Courses",
+		"Empower Your Career with Tec Electrical's Comprehensive Off-Grid Products Training"
 	];
 
-	let timeout;
-	$: idx = 0;
+
+	let interval:any;
+	let timeout:any;
+	let idx = 0;
 
 	$: headline = headlines[idx];
 
@@ -28,12 +31,14 @@
 		}
 	}
 
-	timeout = setTimeout(changeHeadline, 5000);
-
+	
 	let intersecting = false;
 	let container: HTMLElement;
 
 	onMount(() => {
+		timeout = setTimeout(()=>{
+			interval = setInterval(changeHeadline, 5000);
+		},4000)
 		if (typeof IntersectionObserver !== 'undefined') {
 			const observer = new IntersectionObserver(
 				(entries) => {
@@ -58,6 +63,10 @@
 			return () => observer.unobserve(container);
 		}
 	});
+	onDestroy(()=>{
+		clearInterval(interval)
+		clearTimeout(timeout)
+	})
 </script>
 
 <div
@@ -88,7 +97,7 @@
 				<h2
 					class=" font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-centerbtext-white"
 				>
-					Tec Electrical Training Institute
+					Tec Electrical
 				</h2>
 			</div>
 			<div class="md:text-lg lg:text-xl font-base">

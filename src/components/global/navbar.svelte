@@ -53,11 +53,12 @@
 					class="rounded-full"
 					alt="TETI (Tec Electrical) logo"
 				/>
-				<h1 class="text-xl md:text-2xl font-bold tracking-wide">TETI</h1>
+				<h1 class="text-xl md:text-2xl font-bold tracking-wide">Tec Electrical</h1>
 			</a>
 		</div>
 
-		<div class="w-full h-full mobile:flex items-center flex-1 max-w-[350px] hidden">
+		<!-- Search bar -->
+		<!-- <div class="w-full h-full mobile:flex items-center flex-1 max-w-[350px] hidden">
 			<form action="" class="w-full relative">
 				<label for="searchBar" class="absolute bottom-0 left-0 h-full inline-block cursor-pointer">
 					<span class="inline-flex h-full items-center px-[3px] rounded-bl-md tt-primary">
@@ -81,7 +82,7 @@
 					focus:outline-none border-primary focus:border-primary border-t-transparent border-r-transparent transition placeholder:text-surface-text"
 				/>
 			</form>
-		</div>
+		</div> -->
 
 		<div class="flex items-center h-full gap-4">
 			<div class="mobile:hidden flex">
