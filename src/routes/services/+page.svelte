@@ -1,10 +1,9 @@
-<script lang="ts">
-	import type { PageData } from './$types';
+<!-- src/routes/services.svelte -->
 
-	export let data: PageData;
+<script>
+  import Carousel from "./components/Carousel.svelte";
 </script>
-
-<div class="max-w-[1200px] mx-auto pt-[20px]">
+<div class="max-w-[1200px] mx-auto py-[20px]">
 	<div class="flex flex-col justify-center items-center p-4">
 		<p class="leading-none">
 			<span title="Under development">
@@ -26,3 +25,21 @@
 		</p>
 	</div>
 </div>
+
+
+<div class="container mx-auto my-8">
+  <h1 class="text-4xl font-bold mb-6 text-center pb-8">Our Services</h1>
+  <div class="max-w-[700px] mx-auto border">
+    <Carousel />
+  </div>
+  <!-- Rest of your component content -->
+</div>
+
+
+
+
+
+
+
+
+

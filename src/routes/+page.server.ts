@@ -16,12 +16,13 @@ export const load: PageServerLoad = async function ({ locals }: { locals: Locals
 		const data = __data as ProductInterface;
 		return data;
 	});
-	const courses = (await Courses.find({}, { levels: 0 })).flatMap((course) => {
-		const __data = course.toJSON();
-		__data['_id'] = course.id;
-		const data = __data as CourseInterface;
-		return data;
-	});
+	// const courses = (await Courses.find({}, { levels: 0 })).flatMap((course) => {
+	// 	const __data = course.toJSON();
+	// 	__data['_id'] = course.id;
+	// 	const data = __data as CourseInterface;
+	// 	return data;
+	// });
+	const courses: any = [];
 
 	return {
 		payload: JSON.stringify({

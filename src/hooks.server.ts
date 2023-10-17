@@ -19,13 +19,8 @@ interface Locals {
 export const handle = (async ({ event, resolve }) => {
 	const theme = event.cookies.get('theme') || null;
 
-	const newTheme = event.url.searchParams.get('theme');
-
 	let themeColor: string | null = null;
-
-	if (newTheme && ['dark', 'light'].includes(newTheme)) {
-		themeColor = newTheme;
-	} else if (theme && ['dark', 'light'].includes(theme)) {
+	if (theme && ['dark', 'light'].includes(theme)) {
 		themeColor = theme;
 	}
 

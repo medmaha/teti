@@ -41,4 +41,27 @@
 			{/each}
 		</div>
 	</div>
-</div>
+   <h3 class="text-xl sm:text-2xl text-center font-bold py-2 mb-4 pt-20">About (TETI) <br> Tec Electrical Training Institude</h3>
+    <div class="flex justify-center items-center">
+        <div class="max-w-[600px]">
+            <p class="text-lg leading-relaxed text-center mb-8">
+                At TETI, we are more than just a training institute. We are a community of professionals
+                who are passionate about sharing our knowledge and expertise with the next generation of
+                skilled workers.
+            </p>
+            <p class="text-lg leading-relaxed text-center mb-8">
+                Our courses are designed to be hands-on and practical, so students can gain the skills
+                they need to succeed in their careers. Whether you are looking to start a new career in
+                the electrical or solar industry, or you need to upgrade your skills to stay competitive,
+                we have a course that will fit your needs.
+            </p>
+            <p class="text-lg leading-relaxed text-center mb-8">
+                At TETI, we are committed to providing the highest quality training, using the latest
+                technology and industry standards to ensure our students are prepared for success. Join us
+                today and see why TETI is the premier training institute for electrical and solar,
+                industrial automation, IT basics, sales, and installation of electrical and off-grid
+                products.
+            </p>
+        </div>
+    </div>
+</div> 

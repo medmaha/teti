@@ -6,6 +6,7 @@
 
 	import type { PageData } from './$types';
 	import { changeActiveLink } from '$lib/helpers/links';
+	import Services from './components/services.svelte';
 
 	export let data: PageData;
 
@@ -15,7 +16,8 @@
 <div class="">
 	<Headers />
 	<AboutUs />
-	<Courses {courses} />
+	<!-- <Courses {courses} /> -->
+	<Services  />
 	<ProductsContainer {products} />
 	<div class="text-center flex flex-col items-center justify-center">
 		<a
