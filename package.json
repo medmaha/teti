@@ -14,7 +14,6 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.11.0",
-		"@types/nodemailer": "^6.4.7",
 		"@typescript-eslint/eslint-plugin": "^5.55.0",
 		"@typescript-eslint/parser": "^5.55.0",
 		"autoprefixer": "^10.4.14",
@@ -33,7 +32,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"mongoose": "^7.0.3",
-		"nodemailer": "^6.9.1"
+		"mongoose": "^7.0.3"
 	}
 }
