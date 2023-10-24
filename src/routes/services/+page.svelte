@@ -16,8 +16,16 @@
 			description: 'Customized off-grid systems for reliable power anywhere.'
 		},
 		{
-			title: 'Electrical Installations',
-			description: 'Expert electrical installations for homes and businesses.'
+			title: 'Electrical Repairs',
+			description: 'Swift and efficient electrical repair services for issues big or small.'
+		},
+		{
+			title: 'Wiring and Rewiring',
+			description: 'Professional wiring and rewiring services to ensure safety and functionality.'
+		},
+		{
+			title: 'Energy Efficiency Consultation',
+			description: 'Expert advice on optimizing energy use and reducing costs.'
 		}
 	];
 </script>
