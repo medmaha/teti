@@ -80,6 +80,11 @@
 				<li
 					class="rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
 				>
+					<a on:click={handleLinkClick} href="/services">Services</a>
+				</li>
+				<li
+					class="rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
+				>
 					<a on:click={handleLinkClick} href="/courses">Courses</a>
 				</li>
 				<li

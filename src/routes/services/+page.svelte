@@ -1,9 +1,28 @@
 <!-- src/routes/services.svelte -->
-
 <script>
-  import Carousel from "./components/Carousel.svelte";
+	import Carousel from './components/Carousel.svelte';
+
+	let services = [
+		{
+			title: 'Electrical Installations',
+			description: 'Expert electrical installations for homes and businesses.'
+		},
+		{
+			title: 'Solar Solutions',
+			description: 'Cutting-edge solar solutions for sustainable energy.'
+		},
+		{
+			title: 'Off-Grid Systems',
+			description: 'Customized off-grid systems for reliable power anywhere.'
+		},
+		{
+			title: 'Electrical Installations',
+			description: 'Expert electrical installations for homes and businesses.'
+		}
+	];
 </script>
-<div class="max-w-[1200px] mx-auto py-[20px]">
+
+<!-- <div class="max-w-[1200px] mx-auto py-[20px]">
 	<div class="flex flex-col justify-center items-center p-4">
 		<p class="leading-none">
 			<span title="Under development">
@@ -24,22 +43,21 @@
 			This page is currently under development!
 		</p>
 	</div>
-</div>
-
+</div> -->
 
 <div class="container mx-auto my-8">
-  <h1 class="text-4xl font-bold mb-6 text-center pb-8">Our Services</h1>
-  <div class="max-w-[700px] mx-auto border">
-    <Carousel />
-  </div>
-  <!-- Rest of your component content -->
+	<h1 class="text-4xl font-bold mb-6 text-center pb-8">Our Services</h1>
+	<div class="max-w-[800px] mx-auto grid md:grid-cols-2 gap-4 pb-6 mb-4">
+		{#each services as service (service.title)}
+			<div class="tt-card rounded-lg p-4 shadow-md">
+				<h2 class="text-xl font-semibold">{service.title}</h2>
+				<p class="text-sm">{service.description}</p>
+			</div>
+		{/each}
+	</div>
+
+	<div class="max-w-[700px] mx-auto border mt-8">
+		<Carousel />
+	</div>
+	<!-- Rest of your component content -->
 </div>
-
-
-
-
-
-
-
-
-

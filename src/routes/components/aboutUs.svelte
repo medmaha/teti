@@ -79,29 +79,52 @@
 				</p>
 			</div>
 		</div> -->
-		<div  class="max-w-[600px] mx-auto py-8 px-4">
-			<h2 class="text-3xl font-bold mb-6">About TEC Electrical</h2>
-			
-			<p class="leading-relaxed text-center mb-8">
-				Welcome to TEC Electrical, your trusted partner in technical excellence. At TEC Electrical, we don't just offer services; we provide comprehensive solutions to power your projects and innovations.
+		<div class="max-w-[600px] mx-auto py-8 px-4">
+			<h2 class="text-3xl font-bold mb-6">About Tec Electrical</h2>
+
+			<p class="leading-relaxed mb-8">
+				Welcome to TEC Electrical, your trusted partner in technical excellence. At TEC Electrical,
+				we don't just offer services; we provide comprehensive solutions to power your projects and
+				innovations.
 			</p>
 
 			<h3 class="text-xl font-semibold mb-2">Our Expertise:</h3>
-			<p class="leading-relaxed text-center mb-8">
-				Harness our technical prowess in electrical and solar solutions, industrial automation and sales expertise. We specialize in seamless installations of electrical and off-grid products, ensuring your projects are powered efficiently and sustainably.
+			<p class="leading-relaxed mb-8">
+				Harness our technical prowess in electrical and solar solutions, industrial automation and
+				sales expertise. We specialize in seamless installations of electrical and off-grid
+				products, ensuring your projects are powered efficiently and sustainably.
 			</p>
 
 			<h3 class="text-xl font-semibold mb-2">Why Choose TEC Electrical:</h3>
-			<ul class="list-disc ml-6 text-gray-700 mb-4">
-				<li><strong>Cutting-Edge Training:</strong> Our hands-on training equips you with practical skills, enabling you to excel in technical fields.</li>
-				<li><strong>Industry-Leading Standards:</strong> We adhere to the latest industry standards and employ cutting-edge technology to ensure top-notch quality in every service we provide.</li>
-				<li><strong>Customized Solutions:</strong> Tailored to meet your unique needs, our services are designed to elevate your projects to new heights.</li>
+			<ul class="list-disc ml-6 mb-4">
+				<li>
+					<strong>Industry-Leading Standards:</strong>
+					<span class="dark:text-gray-400 text-gray-700">
+						We adhere to the latest industry standards and employ cutting-edge technology to ensure
+						top-notch quality in every service we provide.
+					</span>
+				</li>
+				<li>
+					<strong>Customized Solutions:</strong>
+					<span class="dark:text-gray-400 text-gray-700">
+						Tailored to meet your unique needs, our services are designed to elevate your projects
+						to new heights.
+					</span>
+				</li>
+				<li>
+					<strong>Cutting-Edge Training:</strong>
+					<span class="dark:text-gray-400 text-gray-700">
+						Our hands-on training equips you with practical skills, enabling you to excel in
+						technical fields.
+					</span>
+				</li>
 			</ul>
-			
-			<p class="leading-relaxed text-center mb-8">
-				Join us at TEC Electrical, where technical excellence meets innovation. Experience the power of precision and the strength of knowledge in every service we deliver. Power your future with TEC Electrical.
+
+			<p class="leading-relaxed mb-8">
+				Join us at TEC Electrical, where technical excellence meets innovation. Experience the power
+				of precision and the strength of knowledge in every service we deliver. Power your future
+				with TEC Electrical.
 			</p>
 		</div>
-
 	</div>
 </div>
