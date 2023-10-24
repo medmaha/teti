@@ -3,8 +3,8 @@
 	import { fade } from 'svelte/transition';
 
 	let headlines = [
-		"Discover Your Ultimate Off-Grid Solution with Tec Electrical",
-		"Transform Your Career with Tec Electrical and Solar Training",
+		'Discover Your Ultimate Off-Grid Solution with Tec Electrical',
+		'Transform Your Career with Tec Electrical and Solar Training',
 		"Become a Skilled Electrician with Tec Electrical's Industry-Leading Courses",
 		"Get Ahead in the Solar Industry with Tec Electrical's Hands-On Training",
 		"Learn the Basics of Electrical Engineering with Tec Electrical's Expert Instructors",
@@ -12,9 +12,8 @@
 		"Empower Your Career with Tec Electrical's Comprehensive Off-Grid Products Training"
 	];
 
-
-	let interval:any;
-	let timeout:any;
+	let interval: any;
+	let timeout: any;
 	let idx = 0;
 
 	$: headline = headlines[idx];
@@ -31,14 +30,13 @@
 		}
 	}
 
-	
 	let intersecting = false;
 	let container: HTMLElement;
 
 	onMount(() => {
-		timeout = setTimeout(()=>{
+		timeout = setTimeout(() => {
 			interval = setInterval(changeHeadline, 5000);
-		},4000)
+		}, 4000);
 		if (typeof IntersectionObserver !== 'undefined') {
 			const observer = new IntersectionObserver(
 				(entries) => {
@@ -63,10 +61,10 @@
 			return () => observer.unobserve(container);
 		}
 	});
-	onDestroy(()=>{
-		clearInterval(interval)
-		clearTimeout(timeout)
-	})
+	onDestroy(() => {
+		clearInterval(interval);
+		clearTimeout(timeout);
+	});
 </script>
 
 <div
@@ -77,13 +75,14 @@
 >
 	<div class="absolute w-full h-full" style="z-index: 0;">
 		<img
-			src="/headline.jpeg"
-			alt=""
+			src="/headline.png"
+			alt="heading"
+			loading="eager"
 			class="w-full min-w-[100vw] min-h-[100vh] h-full object-cover"
 		/>
 	</div>
 	<div
-		class="absolute w-full h-full bg-black bg-opacity-60 dark:bg-opacity-30"
+		class="absolute w-full h-full bg-black bg-opacity-60 dark:bg-opacity-[.2] dark:bg-secondary-surface-dark"
 		style="z-index: 0;"
 	/>
 	<div class="flex h-full w-full bg-black bg-opacity-60 dark:bg-opacity-30 px-2 text-white">

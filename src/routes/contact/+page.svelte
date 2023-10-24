@@ -141,6 +141,16 @@
 					>Submit</button
 				>
 			</div>
+			<div class="pt-8 text-center">
+				<p class="text-sm opacity-80">
+					<span class="block pb-1 text-center"> Or call: </span>
+					<span class="font-semibold text-base">
+						+220 778 2759
+						<span class="inline-block px-4 font-medium">|</span>
+						+ 220 376 2965
+					</span>
+				</p>
+			</div>
 		</form>
 	</div>
 </div>

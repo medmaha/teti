@@ -50,7 +50,7 @@
 					src="/teti.png"
 					width="45px"
 					height="45px"
-					class="rounded-full"
+					class="dark:rounded-lg"
 					alt="TETI (Tec Electrical) logo"
 				/>
 				<h1 class="text-xl md:text-2xl font-bold tracking-wide">Tec Electrical</h1>
