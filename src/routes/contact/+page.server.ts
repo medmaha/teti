@@ -4,7 +4,6 @@ import {
 	TETI_EMAIL_HOST
 } from '$env/static/private';
 import { fail, type Actions } from '@sveltejs/kit';
-import nodemailer from 'nodemailer';
 
 export const actions = {
 	contact: async ({ request, fetch }) => {

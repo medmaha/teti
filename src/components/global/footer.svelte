@@ -6,7 +6,9 @@
 	class="border-t w-full border-slate-200 flex flex-col sm:flex-row justify-between text-gray-700 dark:text-gray-400 dark:border-slate-200/5 py-4 sm:px-4 px-2 mt-4"
 >
 	<div class="mb-6 sm:mb-0 sm:flex">
-		<p class="text-center sm:text-left">Copyright © 2023 Tec Electrical Community Inc.</p>
+		<p class="text-center sm:text-left text-xs sm:text-sm">
+			Copyright © 2023 Tec Electrical Community Inc.
+		</p>
 	</div>
 	<div
 		class="pb-4 sm flex justify-center sm:justify-start order-first sm:order-last space-x-10 text-slate-400 dark:text-slate-500"
