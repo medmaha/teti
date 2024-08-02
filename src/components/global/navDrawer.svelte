@@ -34,7 +34,12 @@
 
 	let timeout: any;
 
-	function handleLinkClick() {
+	function handleLinkClick(event: any) {
+
+		const anchorElement = event.target as HTMLAnchorElement
+
+		localStorage.setItem('activeLink', new URL(anchorElement?.href)?.pathname);
+
 		if (timeout) {
 			clearTimeout(timeout);
 		}
@@ -48,6 +53,7 @@
 
 	onMount(() => {
 		darkMode = document.querySelector('html')?.dataset.mode === 'dark';
+		activeTab = localStorage.getItem('activeLink');
 	});
 
 	function toggleTheme() {
@@ -61,6 +67,21 @@
 			update();
 		};
 	}
+
+	$: activeTab = localStorage.getItem('activeLink');
+
+
+	function getLiClasses (href:string){
+		const classes = "rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
+
+		if(href === activeTab){
+			return `active ${classes}`
+		}
+
+		return classes
+
+	}
+
 </script>
 
 <div
@@ -73,32 +94,33 @@
 		<div class="flex w-full justify-center h-full p-2 sm:p-4">
 			<ul class=" flex-1 flex flex-col gap-2 w-full dark:text-white">
 				<li
-					class="active rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
+					class={getLiClasses("/")}
 				>
 					<a on:click={handleLinkClick} href="/">Home</a>
 				</li>
 				<li
-					class="rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
+					class={getLiClasses("/services")}
+
 				>
 					<a on:click={handleLinkClick} href="/services">Services</a>
 				</li>
 				<li
-					class="rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
+					class={getLiClasses("/courses")}
 				>
 					<a on:click={handleLinkClick} href="/courses">Courses</a>
 				</li>
 				<li
-					class="rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
+					class={getLiClasses("/products")}
 				>
 					<a on:click={handleLinkClick} href="/products">Products</a>
 				</li>
 				<li
-					class="rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
+					class={getLiClasses("/#aboutUs")}
 				>
 					<a on:click={handleLinkClick} href="/#aboutUs">About</a>
 				</li>
 				<li
-					class="rounded-md relative inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
+					class={getLiClasses("/basket")}
 				>
 					<a on:click={handleLinkClick} href="/basket" class="relative inline-flex items-center">
 						<span class="pr-4"> Shopping Cart </span>
@@ -126,17 +148,13 @@
 				</li>
 				<li class="w-full bg-gray-400 h-[1px] px-8 leading-none" style="padding:0 2em;" />
 				<li
-					class="rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
+				class={getLiClasses("/blog")}
 				>
 					<a on:click={handleLinkClick} href="/blog">Blog</a>
 				</li>
+		
 				<li
-					class="rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
-				>
-					<a on:click={handleLinkClick} href="/services">Services</a>
-				</li>
-				<li
-					class="rounded-md inline-block gap-2 w-full bg-green-500 bg-opacity-0 hover:bg-opacity-80 hover:text-white transition"
+				class={getLiClasses("/contact")}
 				>
 					<a on:click={handleLinkClick} href="/contact">Contact</a>
 				</li>

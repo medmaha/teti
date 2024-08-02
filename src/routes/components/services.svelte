@@ -42,6 +42,43 @@
 			/>
 		</div>
 	</div>
+
+	<div
+		class="grid grid-cols-1 md:grid-cols-[1fr,300px] lg:grid-cols-[1fr,400px] gap-4 md:gap-8 lg:gap-12 items-center p-4"
+	>
+		<div class="block service">
+			<img
+				class="h-auto w-full border rounded-md shadow object-cover dark:border-gray-600"
+				src={'/assets/services/teti-work-2.jpg'}
+				alt={'Services Image'}
+			/>
+		</div>
+
+		<p class="text-left dark:text-gray-300 text-gray-800 leading-relaxed max-w-[45ch] pt-4 md:pt-0">
+			Our team of experienced technicians will ensure your electrical
+			systems are always operating at their best. From routine maintenance to emergency repairs, we have the expertise
+			and equipment to get the job done quickly and efficiently.
+		</p>
+	</div>
+	<div
+	class="grid grid-cols-1 md:grid-cols-[1fr,300px] lg:grid-cols-[1fr,400px] gap-4 md:gap-8 lg:gap-12 items-center p-4"
+>
+	<p
+		class="text-left dark:text-gray-300 text-gray-800 leading-relaxed text-sm max-w-[45ch] pt-4 md:pt-0"
+	>
+		<b>Tec Electrical Company Ltd</b> is committed to providing reliable and cost-effective electrical
+		solutions to our clients. We strive to exceed our clients' expectations, providing them with
+		the highest quality of service.
+	</p>
+
+	<div class="block service order-first md:order-last">
+		<img
+			class="w-full h-auto border rounded-md shadow block dark:border-gray-600 object-cover "
+			src={'/assets/services/teti-work-1.jpg'}
+			alt={'Services Image'}
+		/>
+	</div>
+</div>
 	<div
 		class="grid grid-cols-1 md:grid-cols-[1fr,300px] lg:grid-cols-[1fr,400px] gap-4 md:gap-8 lg:gap-12 items-center p-4"
 	>

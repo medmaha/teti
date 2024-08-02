@@ -4,7 +4,6 @@
     import type { PageData } from './$types';
   
     const title = "Tec Electrical Training Institude"
-
 	const heading = 'Courses We Offer';
 
 	export let data: PageData;
@@ -15,12 +14,11 @@
 
     <div class="pt-10">
         <h3 class="text-3xl text-center font-bold">{title}</h3>
-        <p class="text-xl sm:text-2xl text-center py-2 font-semibold text-opacity-80">{heading}</p>
     </div>
 
 <div class="max-w-[1200px] mx-auto pt-[20px]">
-	<div id="courses" class="w-full p-4 rounded-t-lg">
-		<div class="sm:flex flex-wrap md:gap-10 justify-evenly">
+	<div id="courses" class="w-full p-4 rounded-t-lg mb-6">
+		<div class="sm:flex flex-wrap md:gap-6 justify-evenly">
 			{#each courses as course}
                 <div>
                     <a
@@ -41,9 +39,11 @@
 			{/each}
 		</div>
 	</div>
-   <h3 class="text-xl sm:text-2xl text-center font-bold py-2 mb-4 pt-20">About (TETI) <br> Tec Electrical Training Institude</h3>
+   <h3 class="text-xl sm:text-2xl text-center font-bold py-2 mb-4 pt-20">
+        Tec Electrical Training Institude
+   </h3>
     <div class="flex justify-center items-center">
-        <div class="max-w-[600px]">
+        <div class="max-w-[800px] bg-current/20">
             <p class="text-lg leading-relaxed text-center mb-8">
                 At TETI, we are more than just a training institute. We are a community of professionals
                 who are passionate about sharing our knowledge and expertise with the next generation of

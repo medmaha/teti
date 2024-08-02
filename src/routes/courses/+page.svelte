@@ -4,7 +4,7 @@
 	const heading = 'Courses We Offer';
 
 	export let data: PageData;
-	const courses = JSON.parse(data.payload);
+	const courses = JSON.parse(data.payload)?.filter((course:any)=>!course.name.toLowerCase().includes('deutsch'));
 </script>
 
 <div class="max-w-[1200px] mx-auto pt-[20px]">

@@ -40,7 +40,6 @@ export const POST: RequestHandler = async ({ request }) => {
 			headers: { 'content-type': 'application/json' }
 		});
 	}
-
 	return new Response();
 };
 
